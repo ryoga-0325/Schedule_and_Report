@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スケジュールカレンダー</title>
+    <link rel='stylesheet' href='/stylesheets/calendar01.css' />
+    <script>
+        const scheduleDataArr = <%- JSON.stringify(scheduleDatas) %>;
+        const userDataArr = <%- JSON.stringify(userDatas) %>;
+    </script>
+</head>
+
+<body>
+    <p id="currentDate" title="<%= currentDate %>"></p>
+    <div class="login_user">
+        <p>
+            <%= loginUserName %>さん　ログイン中
+        </p>
+        <form action="/logout" method="post" autocomplete="off">
+            <button class="logout-button" type="submit">ログアウト</button>
+        </form>
+    </div>
+    <div class="page-header">
+        <form action="/calendar" method="post" autocomplete="off" name="select_form">
+            <div class="footer-container-calendar">
+                <input type="hidden" name="request_date_data_g" id="request_date_data_g">
+                <select id="year" name="year" onchange="generateRequestDate()"></select>
+                <select id="month" name="month" onchange="generateRequestDate()">
+                    <option value=0>1月</option>
+                    <option value=1>2月</option>
+                    <option value=2>3月</option>
+                    <option value=3>4月</option>
+                    <option value=4>5月</option>
+                    <option value=5>6月</option>
+                    <option value=6>7月</option>
+                    <option value=7>8月</option>
+                    <option value=8>9月</option>
+                    <option value=9>10月</option>
+                    <option value=10>11月</option>
+                    <option value=11>12月</option>
+                </select>
+            </div>
+        </form>
+        <h2 id="monthAndYear"></h2>
+        <form action="/calendar" method="post" autocomplete="off" name="selectUserForm">
+            <div class="employee-selecter">
+                <input type="hidden" name="selectUserData" id="selectUserData">
+                <select name="cal_user" id="cal_user" onchange="selectUser()"></select>
+            </div>
+        </form>
+    </div>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger">
+            <%= message %>
+        </div>
+        <% } %>
+
+            <div class="container-calendar">
+                <form action="/calendar" method="post" autocomplete="off">
+                    <div class="button-container-calendar">
+                        <input type="hidden" name="request_date_data_pn" id="request_date_data_pn">
+                        <button type="submit" id="prev" name="prev" onclick="addMonthRequest(-1)">←前月</button>
+                        <button type="submit" id="next" name="next" onclick="addMonthRequest(1)">次月→</button>
+                    </div>
+                </form>
+                <table class="table-calendar" id="calendar" data-lang="ja">
+                    <thead id="thead-month"></thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </div>
+            <script src="javascripts/calendar01.js" type="text/javascript"></script>
+</body>
+
+</html>

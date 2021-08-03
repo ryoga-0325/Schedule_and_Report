@@ -1,0 +1,185 @@
+.wrapper {
+    margin: auto;
+    max-width: auto;
+}
+
+body {
+    width: 91%;
+    margin: auto;
+    padding-top: 0.3em;
+}
+
+.login_user {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0em;
+}
+
+p {
+    margin: 0;
+}
+
+.logout-button {
+    width: 10em;
+    height: 2em;
+    margin-left: 1em;
+    background-color: lightskyblue;
+    border-radius: 4px;
+}
+
+.logout-button:hover {
+    background: deepskyblue;
+}
+
+.page-header {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+}
+
+.container-calendar {
+    background: #ffffff;
+    padding-bottom: 1rem;
+    overflow: auto;
+}
+
+.button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.button-container-calendar button:hover {
+    background: deepskyblue;
+}
+
+.table-calendar {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-calendar th,
+.table-calendar td {
+    width: 13%;
+    padding: 0.3em;
+    vertical-align: top;
+}
+
+th {
+    height: 1em;
+    border: 2px solid darkgray;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+td {
+    border: 1px solid lightgray;
+}
+
+tr:nth-child(odd) {
+    background: whitesmoke;
+}
+
+th:nth-child(1) {
+    color: white;
+    background-color: rgb(243, 89, 89);
+}
+
+th:nth-child(7) {
+    color: white;
+    background-color: rgb(121, 121, 245);
+}
+
+.date-picker {
+    text-align: center;
+}
+
+.date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: orange;
+}
+
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+
+
+/* 日曜 */
+
+.date-picker:nth-child(1) {
+    color: rgb(243, 89, 89);
+}
+
+
+/* 土曜 */
+
+.date-picker:nth-child(7) {
+    color: rgb(121, 121, 245);
+}
+
+.schedule_of_day {
+    max-height: 7em;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.schedule_of_day li {
+    height: 7em;
+}
+
+.date-picker a:link,
+.date-picker a:visited {
+    color: gray;
+    font-weight: bold;
+}
+
+#monthAndYear {
+    text-align: center;
+    margin-top: 0;
+}
+
+.button-container-calendar {
+    position: relative;
+    margin-bottom: 0.3em;
+    overflow: hidden;
+    clear: both;
+}
+
+#previous {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+.footer-container-calendar select,
+.employee-selecter select {
+    padding: 0.3em;
+    font-size: medium;
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+}

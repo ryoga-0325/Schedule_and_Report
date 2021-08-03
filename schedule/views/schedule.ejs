@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予定日報入力</title>
+    <link rel='stylesheet' href='/stylesheets/schedule.css' />
+    <script>
+        const dataArr = <%- JSON.stringify(scheduleData) %>;
+    </script>
+</head>
+
+<body>
+    <p id="login_userid" title="<%= loginUserId %>"></p>
+    <div class="login_user">
+        <p>
+            <%= loginUserName %>さん　ログイン中
+        </p>
+    </div>
+    <% if (message.length > 0 || errormessage.length > 0) { %>
+        <div class="error-message">
+            <%= message %><br>
+                <%= errormessage %>
+        </div>
+        <% } %>
+            <div class="schedule-header">
+                <h2>
+                    <%= date %>
+                </h2>
+                <form action="/calendar" method="post">
+                    <button type="submit" id="back">戻る</button>
+                </form>
+            </div>
+            <div class="schedule-box">
+                <form action="/update" method="post">
+                    <input type="hidden" name="update_status" id="update_status">
+                    <input type="hidden" name="dt" id="dt">
+                    <input type="hidden" name="emp" id="emp">
+                    <input type="hidden" name="id" id="id">
+                    <div class="schedule-textarea">
+                        <label for="schedule_1">予定</label>
+                        <textarea id="schedule_1" name="schedule_text1"></textarea><br>
+                    </div>
+                    <div class="schedule-textarea">
+                        <label for="schedule_2">日報</label>
+                        <textarea id="schedule_2" name="schedule_text2"></textarea><br>
+                    </div>
+                    <div class="schedule-button">
+                        <button type="submit" id="send" formaction="/update" formmethod="post">送信</button>
+                    </div>
+                </form>
+            </div>
+
+            <script src="javascripts/schedule.js" type="text/javascript"></script>
+</body>
+
+</html>

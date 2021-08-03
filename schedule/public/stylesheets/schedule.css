@@ -1,0 +1,113 @@
+p {
+    margin: 0;
+}
+
+.login_user p {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.schedule-header {
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+h2 {
+    margin: 0;
+}
+
+#back {
+    width: 8em;
+    height: 2em;
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.schedule-box {
+    width: 80%;
+    margin: auto;
+    border: 2px solid darkgray;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: whitesmoke;
+}
+
+.schedule-textarea {
+    max-width: 50em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid darkgray;
+    background-color: gainsboro;
+    padding-left: 1em;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 50em;
+    /* 幅 */
+    height: 15em;
+    /* 高さ */
+    margin: 0;
+    /* 周囲の余白 */
+    padding: 0.5em;
+    /* 枠線内の余白 */
+    font-family: sans-serif;
+    font-size: 1em;
+    /* フォントサイズ */
+    border: 2px solid darkgray;
+    /* 枠線のスタイル */
+    /* border-radius: 4px; */
+    /* 角丸に */
+    resize: none;
+    /* リサイズ不可に */
+    vertical-align: top;
+}
+
+textarea:focus {
+    border: solid 2px blue;
+    outline: 0;
+}
+
+.schedule-button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 10em;
+    height: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: lightskyblue;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: deepskyblue;
+}
+
+button:disabled {
+    background-image: none;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+}

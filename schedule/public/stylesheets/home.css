@@ -1,0 +1,97 @@
+body {
+    width: 90%;
+    margin: auto;
+    padding-top: 0.3em;
+}
+
+h2 {
+    margin: 1em;
+    text-align: center;
+}
+
+.login_user p {
+    margin: 0;
+    text-align: right;
+}
+
+.logout {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+form {
+    margin: 0;
+}
+
+.flex-button {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-button {
+    font-size: medium;
+    width: 20em;
+    height: 3em;
+    margin-bottom: 1em;
+    background-color: lightskyblue;
+    border-radius: 4px;
+}
+
+.calendar-button:hover {
+    background: deepskyblue;
+}
+
+.logout-button {
+    width: 10em;
+    height: 3em;
+    background-color: lightskyblue;
+    border-radius: 4px;
+}
+
+.logout-button:hover {
+    background: deepskyblue;
+}
+
+.schedule_table,
+.schedule_table {
+    width: auto;
+    margin: auto;
+    border: 1px solid gainsboro;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: top;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+th {
+    height: 1em;
+    border: 2px solid darkgray;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+.name {
+    width: 11em;
+}
+
+.name-loginUser,
+.schedule-loginUser {
+    background-color: lightcoral;
+}
+
+.schedule {
+    width: 50em;
+    text-align: left;
+}
+
+.schedule-loginUser {
+    text-align: left;
+}

@@ -1,0 +1,85 @@
+.login_user p {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.schedule-body {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.schedule-block {
+    width: auto;
+    display: inline-block;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+h2 {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+#back {
+    width: 8em;
+    height: 2em;
+    margin: 0;
+    margin-bottom: 0.4em;
+    background-color: lightskyblue;
+    border-radius: 4px;
+}
+
+#back:hover {
+    background: deepskyblue;
+}
+
+.schedule_table {
+    width: auto;
+    margin: auto;
+    border: 1px solid gainsboro;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: top;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 0.5em;
+    text-align: center;
+    vertical-align: top;
+}
+
+th {
+    height: 1em;
+    border: 2px solid darkgray;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+.name {
+    width: 11em;
+}
+
+.name-loginUser,
+.schedule-loginUser {
+    background-color: lightcoral;
+}
+
+.schedule {
+    width: 50em;
+    text-align: left;
+}
+
+.schedule-loginUser {
+    text-align: left;
+}
